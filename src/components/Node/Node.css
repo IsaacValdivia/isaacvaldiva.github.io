@@ -1,8 +1,8 @@
 @media screen and (max-width: 992px) {
 	.roundButton {
 		text-align: center;
-		width: 12vmax;
-		height: 12vmax;
+		width: 10.7vmax;
+		height: 10.7vmax;
 	} 
 }
 
@@ -21,15 +21,32 @@
 
 @media screen and (max-width: 992px) {
   .responsiveText {
+		padding-top: 1.75vh;
+		text-align: center;
     font-size: 14px;
   }
 }
 
 @media screen and (min-width: 992px) {
   .responsiveText {
+		padding-top: 2.5vh;
+		text-align: center;
     font-size: 19px;
   }
 }
+
+@media screen and (max-width: 992px) {
+  .responsiveIcon {
+    font-size: 31px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .responsiveIcon {
+    font-size: 39px;
+  }
+}
+
 
 .btn-ripple {
 	display: inline-block;

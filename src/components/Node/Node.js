@@ -13,14 +13,10 @@ const Node = props => {
     size = "md";
   }
   return (
-    <Button
-      className={buttonStyle}
-      disabled={props.disabled}
-      size={size}
-    >
+    <Button className={buttonStyle} disabled={props.disabled} size={size}>
       <div className="d-flex flex-column justify-content-center align-items-center responsiveText">
         {props.disabled ? "" : props.title}
-        {props.disabled ? "" : props.icon}
+        <span className="responsiveIcon">{props.disabled ? "" : props.icon}</span>
       </div>
     </Button>
   );
