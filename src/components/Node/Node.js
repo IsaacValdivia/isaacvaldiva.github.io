@@ -14,7 +14,7 @@ const Node = props => {
   }
   return (
     <Button className={buttonStyle} disabled={props.disabled} size={size}>
-      <div className="d-flex flex-column justify-content-center align-items-center responsiveText">
+      <div className="d-flex flex-column justify-content-center align-items-center responsiveContent">
         {props.disabled ? "" : props.title}
         <span className="responsiveIcon">{props.disabled ? "" : props.icon}</span>
       </div>

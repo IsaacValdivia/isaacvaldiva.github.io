@@ -1,8 +1,8 @@
 @media screen and (max-width: 992px) {
 	.roundButton {
 		text-align: center;
-		width: 10.7vmax;
-		height: 10.7vmax;
+		width: 11vmax;
+		height: 11vmax;
 	} 
 }
 
@@ -20,24 +20,24 @@
 }
 
 @media screen and (max-width: 992px) {
-  .responsiveText {
-		padding-top: 1.75vh;
+  .responsiveContent {
+		padding-top: 1.65vh;
 		text-align: center;
-    font-size: 14px;
+    font-size: 10px;
   }
 }
 
 @media screen and (min-width: 992px) {
-  .responsiveText {
-		padding-top: 2.5vh;
+  .responsiveContent {
+		padding-top: 1.65vh;
 		text-align: center;
-    font-size: 19px;
+    font-size: 21px;
   }
 }
 
 @media screen and (max-width: 992px) {
   .responsiveIcon {
-    font-size: 31px;
+		font-size: 24px;
   }
 }
 
@@ -53,6 +53,7 @@
 	position: relative;
 	overflow: hidden;
 	transition: all ease-in-out .5s;
+	text-align: center;
 }
 
 .btn-ripple::after {
