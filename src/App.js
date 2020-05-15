@@ -23,6 +23,7 @@ const CHAMBER_ICON = <GiQuillInk />;
 const JAZZ_ICON = <GiSaxophone />;
 const PERFORMANCE_ICON = <GiPianoKeys />;
 
+
 const TOP_LEFT = <Node title="Metal&Rock" icon={METAL_ICON} />;
 const TOP_CENTER = <Node title="Orchestral" icon={ORCHESTRA_ICON} />;
 const TOP_RIGHT = <Node title="Electronic" icon={ELECTRONIC_ICON} />;
