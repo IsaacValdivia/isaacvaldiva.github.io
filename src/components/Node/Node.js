@@ -39,7 +39,9 @@ const Node = (props) => {
           <div className="embed-responsive embed-responsive-16by9">
             <iframe
               className="embed-responsive-item"
-              src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0"
+              src="https://www.youtube.com/embed/7QZ6S6tfF78"
+              frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
             ></iframe>
           </div>
