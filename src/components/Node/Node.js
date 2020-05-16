@@ -39,7 +39,9 @@ const Node = (props) => {
           className="modalHeader d-flex flex-row justify-content-end align-items-center"
           toggle={toggle}
           close={closeBtn}
-        ></ModalHeader>
+        >
+          <span className="headerText">{props.title}</span>
+        </ModalHeader>
         <ModalBody className="modalBody">
           <div className="embed-responsive">
             <OwnCarousel />

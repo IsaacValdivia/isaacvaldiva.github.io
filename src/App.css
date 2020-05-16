@@ -35,7 +35,7 @@ body {
   color: #000;
   line-height: 1.6;
   position: relative;
-  font-family: sans-serif;
+  font-family: "Open Sans";
   overflow: scroll;
   -ms-overflow-style: none;
 }
@@ -150,16 +150,83 @@ body::-webkit-scrollbar {
   }
 }
 
-.headshotButtons {
-  
+.aboutOverlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(250, 235, 215, 0.925);
+  box-shadow: inset 0 0 100vmin 1vmax;
 }
 
-.textInButton {
-  font-size: 13px;
+.aboutModal {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(250, 235, 215, 0.925);
+  box-shadow: inset 0 0 100vmin 1vmax;
+}
+
+.modalBody {
+  color: white;
+  font-size: 16px;
+}
+
+.fadeBody {
+  color: black;
+  font-size: 17px;
+}
+
+.infoButton {
+  mix-blend-mode: difference;
+}
+
+.infoText {
+  color: white;
+}
+
+@media screen and (max-width: 992px) {
+  .lowerButtonText {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .lowerButtonText {
+    font-size: 16px;
+  }
+}
+
+.xButton {
+	font-size: 30px;
+	color: rgb(209, 31, 31);
 }
 
 .noBorder {
-  border-width: 0;
+  border-width: 0px;
+}
+
+.competenceParentList {
+  border-width: 0px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.competenceSection {
+  border-width: 0px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.progressBar {
+  height: 2.5vh;
+}
+
+@media screen and (max-width: 992px) {
+  .progressText {
+    font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .progressText {
+    font-size: 19px;
+  }
 }
 
 .lowerZone {

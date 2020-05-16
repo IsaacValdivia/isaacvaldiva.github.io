@@ -54,8 +54,7 @@ const OwnCarousel = props => {
         <iframe
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/tcCs7ulMtOQ"
-          frameborder="0"
+          src="https://www.youtube.com/embed/7QZ6S6tfF78"
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen="true"
           webkitallowfullscreen="true"
