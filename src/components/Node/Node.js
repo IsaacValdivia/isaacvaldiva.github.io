@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
+import OwnCarousel from "../OwnCarousel";
+
 import "./Node.css";
 
 const Node = (props) => {
@@ -14,17 +16,15 @@ const Node = (props) => {
     size = "md";
   }
 
-  let modalClass = "modalContainer unfoldIn";
   const [modal, setModal] = useState(false);
 
-  const toggle = () => {
-    if (!modal) {
-      modalClass = "modalContainer unfoldIn";
-    } else {
-      modalClass = "modalContainer unfoldOut";
-    }
-    setModal(!modal);
-  } 
+  const toggle = () => setModal(!modal);
+
+  const closeBtn = (
+    <button className="close xButton" onClick={toggle}>
+      &times;
+    </button>
+  );
 
   return (
     <div>
@@ -34,16 +34,15 @@ const Node = (props) => {
           <span className="responsiveIcon">{props.disabled ? "" : props.icon}</span>
         </div>
       </Button>
-      <Modal centered isOpen={modal} toggle={toggle} className={modalClass}>
-        <ModalBody>
-          <div className="embed-responsive embed-responsive-16by9">
-            <iframe
-              className="embed-responsive-item"
-              src="https://www.youtube.com/embed/7QZ6S6tfF78"
-              frameborder="0"
-              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-            ></iframe>
+      <Modal centered isOpen={modal} toggle={toggle} className="modalContainer unfoldIn">
+        <ModalHeader
+          className="modalHeader d-flex flex-row justify-content-end align-items-center"
+          toggle={toggle}
+          close={closeBtn}
+        ></ModalHeader>
+        <ModalBody className="modalBody">
+          <div className="embed-responsive">
+            <OwnCarousel />
           </div>
         </ModalBody>
       </Modal>

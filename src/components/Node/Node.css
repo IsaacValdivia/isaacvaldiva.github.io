@@ -89,9 +89,23 @@
 
 /********************************************************************************************/
 
+.xButton {
+	font-size: 30px;
+	color: rgb(209, 31, 31);
+}
+
 .modalContainer {
+	min-width: 80%;
 	animation-name: unfoldIn;
 	animation-duration: 1s;
+}
+
+.modalHeader {
+	height: 3vh;
+}
+
+.modalBody {
+	min-height: 85vh;
 }
 
 @keyframes unfoldIn {
