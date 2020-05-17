@@ -4,6 +4,7 @@ import { Card, CardImg, CardImgOverlay, CardFooter, CardBody, Fade, Progress } f
 import { Container, Row, Col, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import { ListGroup, ListGroupItem } from "reactstrap";
 import { GiOcarina, GiProcessor, GiMinerals, GiViolin, GiSoundWaves, GiSaxophone, GiQuillInk, GiPianoKeys } from "react-icons/gi";
+import { FaGlobeEurope } from "react-icons/fa";
 import { useMediaQuery } from "react-responsive";
 import Node from "./components/Node";
 import './App.css';
@@ -11,7 +12,6 @@ import Headshot from "./res/headshot.jpg"
 import './constants/Constants';
 import { mediaBreakpoint } from "./constants/Constants";
 import { about as aboutText } from "./text.json";
-
 
 const METAL_ICON = <GiMinerals />;
 const ORCHESTRA_ICON = <GiViolin />;
@@ -24,48 +24,51 @@ const CHAMBER_ICON = <GiQuillInk />;
 const JAZZ_ICON = <GiSaxophone />;
 const PERFORMANCE_ICON = <GiPianoKeys />;
 
+let lang = navigator.language.slice(-2);
+if (lang != "ES" && lang != "EN") {
+  lang = "EN";
+}
 
-const TOP_LEFT = <Node title="Metal&Rock" icon={METAL_ICON} />;
-const TOP_CENTER = <Node title="Orchestral" icon={ORCHESTRA_ICON} />;
-const TOP_RIGHT = <Node title="Electronic" icon={ELECTRONIC_ICON} />;
-const MID_RIGHT = <Node title="Chamber" icon={CHAMBER_ICON} />;
-const MID_LEFT = <Node title="Jazz" icon={JAZZ_ICON} />;
-const BOT_LEFT = <Node title="Metal" icon={METAL_ICON} disabled/>;
-const BOT_CENTER = <Node title="Performance" icon={PERFORMANCE_ICON} />;
-const BOT_RIGHT = <Node title="Metal" icon={METAL_ICON} disabled/>;
 
-let lang = "EN";
+let TOP_LEFT = <Node title="Metal&Rock" icon={METAL_ICON} />;
+let TOP_CENTER = <Node title="Orchestral" icon={ORCHESTRA_ICON} />;
+let TOP_RIGHT = <Node title="Electronic" icon={ELECTRONIC_ICON} />;
+let MID_RIGHT = <Node title="Chamber" icon={CHAMBER_ICON} />;
+let MID_LEFT = <Node title="Jazz" icon={JAZZ_ICON} />;
+let BOT_LEFT = <Node title="Metal" icon={METAL_ICON} disabled/>;
+let BOT_CENTER = <Node title="Performance" icon={PERFORMANCE_ICON} />;
+let BOT_RIGHT = <Node title="Metal" icon={METAL_ICON} disabled/>;
 
 const CompetenceContent = (
   <div>
     <ListGroup className="competenceParentList">
       <ListGroupItem className="competenceSection">
-        <span>DAWs</span>
-        <Progress animated value={90} color="dark" className="progressBar">
+        <span className="sectionText">DAWs</span>
+        <Progress value={90} color="dark" className="progressBar">
           <span className="progressText">Cubase</span>
         </Progress>
-        <Progress animated value={90} color="dark" className="mt-2 progressBar">
+        <Progress value={90} color="dark" className="mt-2 progressBar">
           <span className="progressText">FL Studio</span>
         </Progress>
-        <Progress animated value={20} color="dark" className="mt-2 progressBar">
+        <Progress value={20} color="dark" className="mt-2 progressBar">
           <span className="progressText">Pro Tools</span>
         </Progress>
-        <Progress animated value={18} color="dark" className="mt-2 progressBar">
+        <Progress value={18} color="dark" className="mt-2 progressBar">
           <span className="progressText">Ableton</span>
         </Progress>
       </ListGroupItem>
       <ListGroupItem className="competenceSection">
-        <span>Middleware</span>
-        <Progress animated value={10} color="dark" className="progressBar">
+        <span className="sectionText">Middleware</span>
+        <Progress value={10} color="dark" className="progressBar">
           <span className="progressText">Wwise</span>
         </Progress>
-        <Progress animated value={10} color="dark" className="mt-2 progressBar">
+        <Progress value={10} color="dark" className="mt-2 progressBar">
           <span className="progressText">Fmod</span>
         </Progress>
       </ListGroupItem>
       <ListGroupItem className="competenceSection">
-        <span>Other</span>
-        <Progress animated value={57} color="dark" className="progressBar">
+        <span className="sectionText">Other</span>
+        <Progress value={57} color="dark" className="progressBar">
           <span className="progressText">Sibelius</span>
         </Progress>
       </ListGroupItem>
@@ -86,7 +89,9 @@ const LanguagePicker = (props) => {
 
    return (
      <ButtonDropdown isOpen={dropdownOpen} toggle={toggle}>
-       <DropdownToggle caret>{lang}</DropdownToggle>
+       <DropdownToggle caret>
+         {lang} <FaGlobeEurope />
+       </DropdownToggle>
        <DropdownMenu right>
          <DropdownItem onClick={() => setLanguage("EN")}>EN</DropdownItem>
          <DropdownItem divider />
@@ -203,8 +208,7 @@ const App = () => {
                 PROGRAMMING
               </Button>
             </ButtonGroup>
-
-            <LanguagePicker />
+            {/* <LanguagePicker /> */}
           </div>
 
           <Container fluid className="mainCont h-100 d-flex flex-column justify-content-around">
@@ -218,7 +222,7 @@ const App = () => {
             <Row className=" d-flex flex-row align-items-center">
               <Col className="h-100 d-flex flex-column justify-content-center align-items-center">{MID_LEFT}</Col>
               <Col xs={5} className="w-100 h-100 d-flex flex-column justify-content-center align-items-center">
-                <InfoPanel/>
+                <InfoPanel />
               </Col>
               <Col className="h-100 d-flex flex-column justify-content-center align-items-center">{MID_RIGHT}</Col>
             </Row>
@@ -233,7 +237,12 @@ const App = () => {
         </div>
         <div className="lowerZone d-flex flex-row justify-content-between text-white">
           <span className="lowerText">© 2020 Isaac Valdivia</span>
-          <span className="lowerText">isaac.valdivia.audio@gmail.com</span>
+          <a
+            href="javascript:location='mailto:\u0069\u0073\u0061\u0061\u0063\u002e\u0076\u0061\u006c\u0064\u0069\u0076\u0069\u0061\u002e\u0061\u0075\u0064\u0069\u006f\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0"
+            className="lowerText"
+          >
+            isaac.valdivia.audio<code>@</code>gmail.com
+          </a>
         </div>
       </div>
     );

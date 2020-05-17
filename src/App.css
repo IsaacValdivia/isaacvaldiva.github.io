@@ -35,7 +35,7 @@ body {
   color: #000;
   line-height: 1.6;
   position: relative;
-  font-family: "Open Sans";
+  font-family: "Open Sans", "Verdana", sans-serif;
   overflow: scroll;
   -ms-overflow-style: none;
 }
@@ -213,17 +213,27 @@ body::-webkit-scrollbar {
   background-color: rgba(0, 0, 0, 0);
 }
 
-.progressBar {
-  height: 2.5vh;
-}
 
 @media screen and (max-width: 992px) {
+  .sectionText {
+    font-size: 18px;
+  }
+  .progressBar {
+    height: 3.5vh;
+  }
   .progressText {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 
 @media screen and (min-width: 992px) {
+  .sectionText {
+    font-size: 28px;
+    letter-spacing: 0.2vw;
+  }
+  .progressBar {
+    height: 2.5vh;
+  }
   .progressText {
     font-size: 19px;
   }
@@ -251,5 +261,6 @@ body::-webkit-scrollbar {
 }
 
 .lowerText {
+  color: white;
   opacity: 0.5;
 }
