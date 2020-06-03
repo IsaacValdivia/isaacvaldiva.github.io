@@ -10,8 +10,10 @@ import Node from "./components/Node";
 import './App.css';
 import Headshot from "./res/headshot.jpg"
 import './constants/Constants';
+import './VideoData';
 import { mediaBreakpoint } from "./constants/Constants";
 import { about as aboutText } from "./text.json";
+import { METAL_ITEMS, ORCHESTRAL_ITEMS, ELECTRONIC_ITEMS, CHAMBER_ITEMS, JAZZ_ITEMS, PERFORMANCE_ITEMS } from "./VideoData";
 
 const METAL_ICON = <GiMinerals />;
 const ORCHESTRA_ICON = <GiViolin />;
@@ -29,14 +31,13 @@ if (lang != "ES" && lang != "EN") {
   lang = "EN";
 }
 
-
-let TOP_LEFT = <Node title="Metal&Rock" icon={METAL_ICON} />;
-let TOP_CENTER = <Node title="Orchestral" icon={ORCHESTRA_ICON} />;
-let TOP_RIGHT = <Node title="Electronic" icon={ELECTRONIC_ICON} />;
-let MID_RIGHT = <Node title="Chamber" icon={CHAMBER_ICON} />;
-let MID_LEFT = <Node title="Jazz" icon={JAZZ_ICON} />;
+let TOP_LEFT = <Node title="Metal&Rock" icon={METAL_ICON} videodata={METAL_ITEMS}/>;
+let TOP_CENTER = <Node title="Orchestral" icon={ORCHESTRA_ICON} videodata={ORCHESTRAL_ITEMS} />;
+let TOP_RIGHT = <Node title="Electronic" icon={ELECTRONIC_ICON} videodata={ELECTRONIC_ITEMS} />;
+let MID_RIGHT = <Node title="Chamber" icon={CHAMBER_ICON} videodata={CHAMBER_ITEMS} />;
+let MID_LEFT = <Node title="Jazz" icon={JAZZ_ICON} videodata={JAZZ_ITEMS} />;
 let BOT_LEFT = <Node title="Metal" icon={METAL_ICON} disabled/>;
-let BOT_CENTER = <Node title="Performance" icon={PERFORMANCE_ICON} />;
+let BOT_CENTER = <Node title="Performance" icon={PERFORMANCE_ICON} videodata={PERFORMANCE_ITEMS} />;
 let BOT_RIGHT = <Node title="Metal" icon={METAL_ICON} disabled/>;
 
 const CompetenceContent = (

@@ -44,7 +44,7 @@ const Node = (props) => {
         </ModalHeader>
         <ModalBody className="modalBody">
           <div className="embed-responsive">
-            <OwnCarousel />
+            <OwnCarousel videodata={props.videodata}/>
           </div>
         </ModalBody>
       </Modal>

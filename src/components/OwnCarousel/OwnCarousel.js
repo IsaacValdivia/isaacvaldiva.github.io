@@ -3,37 +3,19 @@ import { Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCa
 
 import "./OwnCarousel.css";
 
-const items = [
-  {
-    id: 1,
-    altText: "Slide 1",
-    caption: "Slide 1"
-  },
-  {
-    id: 2,
-    altText: "Slide 2",
-    caption: "Slide 2"
-  },
-  {
-    id: 3,
-    altText: "Slide 3",
-    caption: "Slide 3"
-  }
-];
-
 const OwnCarousel = props => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [animating, setAnimating] = useState(false);
 
   const next = () => {
     if (animating) return;
-    const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
+    const nextIndex = activeIndex === props.items.length - 1 ? 0 : activeIndex + 1;
     setActiveIndex(nextIndex);
   };
 
   const previous = () => {
     if (animating) return;
-    const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
+    const nextIndex = activeIndex === 0 ? props.items.length - 1 : activeIndex - 1;
     setActiveIndex(nextIndex);
   };
 
@@ -42,7 +24,7 @@ const OwnCarousel = props => {
     setActiveIndex(newIndex);
   };
 
-  const slides = items.map(item => {
+  const slides = props.videodata.map(item => {
     return (
       <CarouselItem
         className="custom-tag"
@@ -52,9 +34,10 @@ const OwnCarousel = props => {
         onExited={() => setAnimating(false)}
       >
         <iframe
+          altText={item.altText}
           width="560"
           height="315"
-          src="https://www.youtube.com/embed/7QZ6S6tfF78"
+          src={item.link}
           allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen="true"
           webkitallowfullscreen="true"
