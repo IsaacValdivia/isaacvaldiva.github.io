@@ -38,7 +38,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "homepage": "https://isaacvaldivia.github.io/portfolio-site",
+  "homepage": "https://isaacvaldivia.com",
   "eslintConfig": {
     "extends": "react-app"
   },

@@ -132,8 +132,8 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 992px) {
   .roundHeadshot {
     border-radius: 50%;
-    width: 16vmax;
-    height: 23vmax;
+    width: 15.5vmax;
+    height: 22vmax;
     box-shadow: 0px 1px 1px 1px rgb(19, 19, 26);
   }
 }

@@ -1,4 +1,12 @@
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 390px) {
+	.roundButton {
+		text-align: center;
+		width: 9vmax;
+		height: 9vmax;
+	} 
+}
+
+@media screen and (min-width: 390px) {
 	.roundButton {
 		text-align: center;
 		width: 10vmax;
@@ -9,8 +17,8 @@
 @media screen and (min-width: 992px) {
 	.roundButton {
 		text-align: center;
-		width: 8.5vmax;
-		height: 8.5vmax;
+		width: 8.75vmax;
+		height: 8.75vmax;
 	} 
 }
 
@@ -35,23 +43,31 @@
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 800px) {
   .responsiveContent {
 		padding-top: 1.65vh;
 		text-align: center;
-    font-size: 21px;
+    font-size: 15px;
   }
 }
 
-@media screen and (max-width: 992px) {
-  .responsiveIcon {
-		font-size: 20px;
+@media screen and (min-width: 1462px) {
+  .responsiveContent {
+		padding-top: 1.65vh;
+		text-align: center;
+    font-size: 17px;
   }
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (max-width: 600px) {
   .responsiveIcon {
-    font-size: 39px;
+		font-size: 17px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .responsiveIcon {
+    font-size: 34px;
   }
 }
 
