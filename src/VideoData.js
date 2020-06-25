@@ -1,9 +1,14 @@
 export const METAL_ITEMS = [
-  {
-    id: 1,
-    link: "https://www.youtube.com/embed/BGyuTeXbFus"
-  },
-];
+      {
+           id: 1,
+           link: "https://www.youtube.com/embed/VPqAVCnesXE"
+         },
+         {
+           id: 2,
+           link: "https://www.youtube.com/embed/BGyuTeXbFus"
+         },
+  
+       ];
 
 export const ORCHESTRAL_ITEMS = [
   {

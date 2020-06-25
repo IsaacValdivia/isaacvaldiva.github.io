@@ -9,13 +9,13 @@ const OwnCarousel = props => {
 
   const next = () => {
     if (animating) return;
-    const nextIndex = activeIndex === props.items.length - 1 ? 0 : activeIndex + 1;
+    const nextIndex = activeIndex === props.videodata.length - 1 ? 0 : activeIndex + 1;
     setActiveIndex(nextIndex);
   };
 
   const previous = () => {
     if (animating) return;
-    const nextIndex = activeIndex === 0 ? props.items.length - 1 : activeIndex - 1;
+    const nextIndex = activeIndex === 0 ? props.videodata.length - 1 : activeIndex - 1;
     setActiveIndex(nextIndex);
   };
 
