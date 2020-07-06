@@ -1,13 +1,12 @@
 export const METAL_ITEMS = [
-      {
+         {
            id: 1,
-           link: "https://www.youtube.com/embed/VPqAVCnesXE"
+           link: "https://www.youtube.com/embed/BGyuTeXbFus"
          },
          {
            id: 2,
-           link: "https://www.youtube.com/embed/BGyuTeXbFus"
-         },
-  
+           link: "https://www.youtube.com/embed/mjton5petrk"
+         }
        ];
 
 export const ORCHESTRAL_ITEMS = [
@@ -39,9 +38,9 @@ export const CHAMBER_ITEMS = [
 ];
 
 export const PERFORMANCE_ITEMS = [
-  {
-    id: 1,
-    link: undefined
-  },
-];
+         {
+           id: 1,
+           link: "https://www.youtube.com/embed/vEwuqfP9bS4"
+         }
+       ];
 
