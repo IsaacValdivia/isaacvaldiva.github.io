@@ -5,7 +5,7 @@ export const METAL_ITEMS = [
          },
          {
            id: 2,
-           link: "https://www.youtube.com/embed/mjton5petrk"
+           link: "https://www.youtube.com/embed/YkJjwHIWajo"
          }
        ];
 
@@ -38,9 +38,14 @@ export const CHAMBER_ITEMS = [
 ];
 
 export const PERFORMANCE_ITEMS = [
-         {
+  {
            id: 1,
+           link: "https://www.youtube.com/embed/gxUAADCT36g"
+         },
+         {
+           id: 2,
            link: "https://www.youtube.com/embed/vEwuqfP9bS4"
          }
+        
        ];
 
