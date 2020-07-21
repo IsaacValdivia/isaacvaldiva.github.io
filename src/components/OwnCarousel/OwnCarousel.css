@@ -11,8 +11,12 @@
     top: 47%;
     height: 6vmax;
     width: 6vmax;
-    background-color: rgba(24, 24, 29, 0.904);
-    border-radius: 50%;
+    background-color: black;
+    border: 5px solid white;
+    border-radius: 50%;    
+  }
+  .buttonCar:hover {
+    background-color: red;
   }
 }
 
@@ -23,8 +27,12 @@
     top: 44%;
     height: 6vmax;
     width: 6vmax;
-    background-color: rgba(24, 24, 29, 0.904);
+    background-color: black;
+    border: 5px solid white;
     border-radius: 50%;
+  }
+  .buttonCar:hover {
+    background-color: red;
   }
 }
 

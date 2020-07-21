@@ -131,20 +131,20 @@ body::-webkit-scrollbar {
 
 @media screen and (max-width: 992px) {
   .roundHeadshot {
-    border-radius: 50%;
-    width: 15.5vmax;
-    height: 22vmax;
+    border-radius: 10%;
+    width: 13.97vmax;
+    height: 19vmax;
     box-shadow: 0px 1px 1px 1px rgb(19, 19, 26);
   }
 }
 
 @media screen and (min-width: 992px) {
   .roundHeadshot {
-    border-radius: 50%;
+    border-radius: 10%;
     border-color: rgb(19, 19, 19);
     border-width: 4px;
-    width: 18vmax;
-    height: 25vmax;
+    width: 13.97vmax;
+    height: 18.34vmax;
     /*box-shadow: 0px 10px 10px 10px rgb(19, 19, 26);*/
     box-shadow: 80px 0 50px 4px rgba(20, 20, 20), -80px 0 50px 4px rgb(20, 20, 20);
   }

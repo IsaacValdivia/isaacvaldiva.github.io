@@ -8,7 +8,7 @@ import { FaGlobeEurope } from "react-icons/fa";
 import { useMediaQuery } from "react-responsive";
 import Node from "./components/Node";
 import './App.css';
-import Headshot from "./res/headshot.jpg"
+import Headshot from "./res/headshot2.png"
 import './constants/Constants';
 import './VideoData';
 import { mediaBreakpoint } from "./constants/Constants";
@@ -132,7 +132,7 @@ const InfoPanel = props => {
     return (
       <Card className="h-100 w-100 justify-content-center align-items-center text-center cardView">
         <div>
-          <CardImg top className="roundHeadshot" src={Headshot} alt="Card image cap" />
+          <CardImg top className="roundHeadshot " src={Headshot} alt="Card image cap" />
           {useMediaQuery({ query: "(max-width: 992px)" }) ? (
             <div>
               <Modal isOpen={fadeInAbout} toggle={toggleAbout} contentClassName="aboutModal">

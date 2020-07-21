@@ -105,11 +105,6 @@
 
 /********************************************************************************************/
 
-.xButton {
-	font-size: 30px;
-	color: rgb(226, 19, 19);
-}
-
 .modalContainer {
 	min-width: 80%;
 	animation-name: unfoldIn;

@@ -21,7 +21,7 @@ const Node = (props) => {
   const toggle = () => setModal(!modal);
 
   const closeBtn = (
-    <button className="close xButton" onClick={toggle}>
+    <button className="close text-white" onClick={toggle}>
       &times;
     </button>
   );
