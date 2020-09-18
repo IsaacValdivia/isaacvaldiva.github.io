@@ -8,7 +8,7 @@ import { FaGlobeEurope } from "react-icons/fa";
 import { useMediaQuery } from "react-responsive";
 import Node from "./components/Node";
 import './App.css';
-import Headshot from "./res/headshot2.png"
+import Headshot from "./res/headshot4.png"
 import './constants/Constants';
 import './VideoData';
 import { mediaBreakpoint } from "./constants/Constants";
