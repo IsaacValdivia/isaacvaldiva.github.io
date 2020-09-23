@@ -3,7 +3,7 @@ import { ButtonGroup, Button, ButtonDropdown, DropdownToggle, DropdownMenu, Drop
 import { Card, CardImg, CardImgOverlay, CardFooter, CardBody, Fade, Progress } from "reactstrap";
 import { Container, Row, Col, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import { ListGroup, ListGroupItem } from "reactstrap";
-import { GiOcarina, GiProcessor, GiMinerals, GiViolin, GiSoundWaves, GiSaxophone, GiQuillInk, GiPianoKeys } from "react-icons/gi";
+import { GiOcarina, GiProcessor, GiMinerals, GiViolin, GiSoundWaves, GiSaxophone, GiQuillInk, GiPianoKeys, GiAudioCassette, GiPerspectiveDiceSixFacesRandom } from "react-icons/gi";
 import { FaGlobeEurope } from "react-icons/fa";
 import { useMediaQuery } from "react-responsive";
 import Node from "./components/Node";
@@ -13,18 +13,16 @@ import './constants/Constants';
 import './VideoData';
 import { mediaBreakpoint } from "./constants/Constants";
 import { about as aboutText } from "./text.json";
-import { METAL_ITEMS, ORCHESTRAL_ITEMS, ELECTRONIC_ITEMS, CHAMBER_ITEMS, JAZZ_ITEMS, PERFORMANCE_ITEMS } from "./VideoData";
+import { METAL_ITEMS, ORCHESTRAL_ITEMS, ELECTRONIC_ITEMS, CHAMBER_ITEMS, JAZZ_ITEMS, PERFORMANCE_ITEMS, HYBRID_ITEMS, HIP_HOP_ITEMS } from "./VideoData";
 
 const METAL_ICON = <GiMinerals />;
 const ORCHESTRA_ICON = <GiViolin />;
-const ORCHESTRA_CALM_ICON = <GiOcarina />;
-const ORCHESTRA_INTENSE_ICON = <GiOcarina />;
 const ELECTRONIC_ICON = <GiSoundWaves />;
-const ELECTRONIC_CALM = <GiOcarina />;
-const ELECTRONIC_INTENSE = <GiOcarina />;
 const CHAMBER_ICON = <GiQuillInk />;
 const JAZZ_ICON = <GiSaxophone />;
 const PERFORMANCE_ICON = <GiPianoKeys />;
+const HIP_HOP_ICON = <GiAudioCassette/>;
+const HYBRID_OTHER_ICON = <GiPerspectiveDiceSixFacesRandom/>;
 
 let lang = navigator.language.slice(-2);
 if (lang != "ES" && lang != "EN") {
@@ -34,11 +32,11 @@ if (lang != "ES" && lang != "EN") {
 let TOP_LEFT = <Node title="Metal&Rock" icon={METAL_ICON} videodata={METAL_ITEMS}/>;
 let TOP_CENTER = <Node title="Orchestral" icon={ORCHESTRA_ICON} videodata={ORCHESTRAL_ITEMS} />;
 let TOP_RIGHT = <Node title="Electronic" icon={ELECTRONIC_ICON} videodata={ELECTRONIC_ITEMS} />;
+let MID_LEFT = <Node title="Hybrid" icon={HYBRID_OTHER_ICON} videodata={HYBRID_ITEMS} />;
 let MID_RIGHT = <Node title="Chamber" icon={CHAMBER_ICON} videodata={CHAMBER_ITEMS} />;
-let MID_LEFT = <Node title="Jazz" icon={JAZZ_ICON} videodata={JAZZ_ITEMS} />;
-let BOT_LEFT = <Node title="Metal" icon={METAL_ICON} disabled/>;
+let BOT_RIGHT = <Node title="Jazz" icon={JAZZ_ICON} videodata={JAZZ_ITEMS} disabled/>;
+let BOT_LEFT = <Node title="Hip-Hop" icon={HIP_HOP_ICON} videodata={HIP_HOP_ITEMS}/>;
 let BOT_CENTER = <Node title="Performance" icon={PERFORMANCE_ICON} videodata={PERFORMANCE_ITEMS} />;
-let BOT_RIGHT = <Node title="Metal" icon={METAL_ICON} disabled/>;
 
 const CompetenceContent = (
   <div>

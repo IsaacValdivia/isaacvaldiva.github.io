@@ -54,3 +54,16 @@ export const PERFORMANCE_ITEMS = [
         
        ];
 
+export const HYBRID_ITEMS = [
+         {
+           id: 1,
+           link: "https://www.youtube.com/embed/b8khhx6Fz2c"
+         }
+       ];
+
+export const HIP_HOP_ITEMS = [
+         {
+           id: 1,
+           link: "https://www.youtube.com/embed/x5W3QgErerU"
+         }
+       ];
