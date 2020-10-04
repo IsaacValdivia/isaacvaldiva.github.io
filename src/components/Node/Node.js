@@ -16,6 +16,12 @@ const Node = (props) => {
     size = "md";
   }
 
+  if (props.special) {
+    buttonStyle += " specialButton"
+  } else {
+    buttonStyle += " normalButton"
+  }
+
   const [modal, setModal] = useState(false);
 
   const toggle = () => setModal(!modal);

@@ -1,13 +1,12 @@
 export const METAL_ITEMS = [
-         
          {
            id: 1,
-           link: "https://www.youtube.com/embed/YkJjwHIWajo"
+           link: "https://www.youtube.com/embed/BGyuTeXbFus"
          },
          {
            id: 2,
-           link: "https://www.youtube.com/embed/BGyuTeXbFus"
-         },
+           link: "https://www.youtube.com/embed/YkJjwHIWajo"
+         }
        ];
 
 export const ORCHESTRAL_ITEMS = [
@@ -28,7 +27,7 @@ export const ELECTRONIC_ITEMS = [
   }
 ];
 
-export const JAZZ_ITEMS = [
+export const INTERACTIVE_ITEMS = [
   {
     id: 1,
     link: undefined
