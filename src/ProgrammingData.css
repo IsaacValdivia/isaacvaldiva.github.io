@@ -1,0 +1,12 @@
+.myJumbotron {
+  background-color: rgba(19, 19, 26, 0);
+  width: 70%
+}
+
+.headerResponsive {
+  font-size: 3vmax;
+}
+
+.bodyResponsive {
+  font-size: 1.2vmax;
+}

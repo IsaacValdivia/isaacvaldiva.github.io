@@ -6,13 +6,13 @@ import "./Node.css";
 
 const Node = (props) => {
 
-  let buttonStyle = "btn-ripple rounded-circle ";
+  let buttonStyle = "btn-ripple rounded-circle";
   let size;
   if (props.disabled) {
-    buttonStyle += "disabledButton";
+    buttonStyle += " disabledButton";
     size = "sm";
   } else {
-    buttonStyle += "roundButton";
+    buttonStyle += " roundButton";
     size = "md";
   }
 
@@ -24,7 +24,7 @@ const Node = (props) => {
 
   const [modal, setModal] = useState(false);
 
-  const toggle = () => setModal(!modal);
+  const toggle = () => props.disabled ? undefined : setModal(!modal)
 
   const closeBtn = (
     <button className="close text-white" onClick={toggle}>
@@ -34,7 +34,7 @@ const Node = (props) => {
 
   return (
     <div>
-      <Button className={buttonStyle} disabled={props.disabled} size={size} onClick={toggle}>
+      <Button className={buttonStyle} size={size} onClick={toggle}>
         <div className="d-flex flex-column justify-content-center align-items-center responsiveContent">
           {props.disabled ? "" : props.title}
           <span className="responsiveIcon">{props.disabled ? "" : props.icon}</span>
@@ -50,7 +50,7 @@ const Node = (props) => {
         </ModalHeader>
         <ModalBody className="modalBody">
           <div className="embed-responsive">
-            <OwnCarousel videodata={props.videodata}/>
+            {props.nodeContent}
           </div>
         </ModalBody>
       </Modal>

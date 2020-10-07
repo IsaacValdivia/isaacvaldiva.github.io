@@ -24,7 +24,9 @@
 
 .disabledButton {
   width: 2.5vmax;
-  height: 2.5vmax;
+	height: 2.5vmax;
+	color: rgba(20, 39, 77, 0.603);
+	background-color: rgba(20, 39, 77, 0.603);
 }
 
 .specialButton {
@@ -33,12 +35,16 @@
 }
 
 .normalButton {
-	background-color: rgba(16, 29, 54, 0.603);
+	background-color: rgba(56, 78, 121, 0.603);
 	border: none;
 }
 
 .normalButton:hover {
-	background-color: rgba(0, 24, 70, 0.808);
+	background-color: rgba(0, 45, 128, 0.808);
+}
+
+.normalButton:focus {
+	background-color: rgba(0, 45, 128, 0.808);
 }
 
 .specialButton:hover {

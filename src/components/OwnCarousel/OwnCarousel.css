@@ -1,7 +1,14 @@
-.custom-tag {
+.custom-tag-video {
   min-width: 100%;
   height: 80vh;
   background: black;
+}
+
+.custom-tag-text {
+  min-width: 100%;
+  height: 80vh;
+  background: rgba(32, 32, 32, 0);
+  overflow-y: auto;
 }
 
 @media screen and (max-width: 992px) {

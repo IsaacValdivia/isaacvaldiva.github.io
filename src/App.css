@@ -28,13 +28,87 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+
+.linkSection {
+  position: relative;
+  display: table-cell;
+  text-align: center;
+  color: rgb(255, 255, 200);
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: 0.2s ease color;
+}
+
+@media screen and (max-width: 992px) {
+  .linkSection {
+    font-size: 12px;
+  }
+}
+
 @media screen and (min-width: 992px) {
   .topBar {
     padding-left: 0.4vw;
     padding-right: 0.4vw;
-    padding-top: 1vh;
+    padding-top: 0.5vh;
+
+    display: table;
+  }
+
+  .linkSection {
+    font-size: 18px;
   }
 }
+
+/* ------------------------------ */
+
+
+.linkSection:before, .linkSection:after
+{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: 0.2s ease transform;
+}
+
+.linkSection:before
+{
+    top: 0;
+    left: 10px;
+    width: 6px;
+    height: 6px;
+}
+
+.linkSection:after
+{
+    top: 5px;
+    left: 18px;
+    width: 4px;
+    height: 4px
+}
+
+.linkSection:after
+{
+    background-color: #1571db;
+}
+
+.linkSection:before
+{
+    background-color: rgb(255, 255, 148);
+}
+
+.linkSection:hover
+{
+    color: rgb(255, 255, 148);
+}
+
+.linkSection:hover:before, .linkSection:hover:after
+{
+    transform: scale(1);
+}
+
+/* ------------------------------ */
 
 @media screen and (max-width: 992px) {
   .twoButtons {
@@ -68,6 +142,31 @@ body::-webkit-scrollbar {
 
 .bordered {
   border: 5px solid red;
+}
+
+.lowerZone {
+  padding-left: 1.5vw;
+  padding-right: 1.5vw;
+  letter-spacing: 0.25vw;
+  height: 2.5vh;
+}
+
+@media screen and (max-width: 992px) {
+  .lowerZone {
+    font-size: 10px;
+  }
+}
+
+
+@media screen and (min-width: 992px) {
+  .lowerZone {
+    font-size: 15px;
+  }
+}
+
+.lowerText {
+  color: white;
+  opacity: 0.5;
 }
 
 /* -------------------------------------------- */

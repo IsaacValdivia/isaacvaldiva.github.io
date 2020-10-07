@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import $ from "jquery";
 import { Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption } from "reactstrap";
 
 import "./OwnCarousel.css";
@@ -9,13 +10,13 @@ const OwnCarousel = props => {
 
   const next = () => {
     if (animating) return;
-    const nextIndex = activeIndex === props.videodata.length - 1 ? 0 : activeIndex + 1;
+    const nextIndex = activeIndex === props.data.length - 1 ? 0 : activeIndex + 1;
     setActiveIndex(nextIndex);
   };
 
   const previous = () => {
     if (animating) return;
-    const nextIndex = activeIndex === 0 ? props.videodata.length - 1 : activeIndex - 1;
+    const nextIndex = activeIndex === 0 ? props.data.length - 1 : activeIndex - 1;
     setActiveIndex(nextIndex);
   };
 
@@ -24,28 +25,46 @@ const OwnCarousel = props => {
     setActiveIndex(newIndex);
   };
 
-  const slides = props.videodata.map(item => {
-    return (
-      <CarouselItem
-        className="custom-tag"
-        tag="div"
-        key={item.id}
-        onExiting={() => setAnimating(true)}
-        onExited={() => setAnimating(false)}
-      >
-        <iframe
-          altText={item.altText}
-          width="560"
-          height="315"
-          src={item.link}
-          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen="true"
-          webkitallowfullscreen="true"
-          mozallowfullscreen="true"
-        ></iframe>
-      </CarouselItem>
-    );
-  });
+  let slides = null;
+
+  if (props.video) {
+    slides = props.data.map(item => {
+      return (
+        <CarouselItem
+          className="custom-tag-video"
+          tag="div"
+          key={item.id}
+          onExiting={() => setAnimating(true)}
+          onExited={() => setAnimating(false)}
+        >
+          <iframe
+            altText={item.altText}
+            width="560"
+            height="315"
+            src={item.link}
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen="true"
+            webkitallowfullscreen="true"
+            mozallowfullscreen="true"
+          ></iframe>
+        </CarouselItem>
+      );
+    });
+  } else {
+    slides = props.data.map(item => {
+      return (
+        <CarouselItem
+          className="custom-tag-text"
+          tag="div"
+          key={item.id}
+          onExiting={() => setAnimating(true)}
+          onExited={() => setAnimating(false)}
+        >
+          {item.body}
+        </CarouselItem>
+      );
+    });
+  }
 
   return (
     <div>
