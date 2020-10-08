@@ -5,7 +5,7 @@ import {
   GiMusicalNotes,
   GiConsoleController
 } from "react-icons/gi";
-import { AUDIO_MUSIC_SLIDES } from "./ProgrammingData";
+import { AUDIO_SLIDES, VIDEOGAME_SLIDES } from "./ProgrammingData";
 import Node from "./components/Node";
 import OwnCarousel from "./components/OwnCarousel";
 
@@ -14,8 +14,8 @@ const ROBOTICS_ICON = <GiVintageRobot />;
 const AUDIO_ICON = <GiMusicalNotes />;
 const VIDEOGAMES_ICON = <GiConsoleController />;
 
-const TOP_LEFT_CONTENT = <OwnCarousel data={AUDIO_MUSIC_SLIDES} />;
-const TOP_CENTER_CONTENT = <OwnCarousel  />;
+const TOP_LEFT_CONTENT = <OwnCarousel data={AUDIO_SLIDES} />;
+const TOP_CENTER_CONTENT = <OwnCarousel data={VIDEOGAME_SLIDES} />;
 const TOP_RIGHT_CONTENT = <OwnCarousel  />;
 const MID_LEFT_CONTENT = <OwnCarousel  />;
 const MID_RIGHT_CONTENT = <OwnCarousel  />;

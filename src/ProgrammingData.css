@@ -1,6 +1,6 @@
-.myJumbotron {
+.fullDiv {
   background-color: rgba(19, 19, 26, 0);
-  width: 70%
+  width: 70%;
 }
 
 .headerResponsive {
@@ -8,5 +8,64 @@
 }
 
 .bodyResponsive {
-  font-size: 1.2vmax;
+  font-size: 1.5vh;
+}
+
+@media screen and (max-width: 992px) {
+  .videoContainer {
+    min-height: 42vh;
+  }
+  #videoItself1 {
+    margin-top: 18vh;
+  }
+  #videoItself2 {
+    margin-top: 22vh;
+  }
+  .underText {
+    margin-top: 22vh;
+    color: 
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .videoContainer {
+    min-height: 50vh;
+  }
+  #videoItself1 {
+    margin-top: 12vh;
+  }
+  #videoItself2 {
+    margin-top: 12vh;
+  }
+  .underText {
+    margin-top: 14vh;
+  }
+}
+
+iframe {
+    -moz-transform: scale(0.7); 
+    -webkit-transform: scale(0.7); 
+    -o-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7); 
+    -moz-transform-origin: center center;
+    -webkit-transform-origin: center center;
+    -o-transform-origin: center center;
+    -ms-transform-origin: center center;
+    transform-origin: center center;
+    border: solid #ccc 10px;
+}
+
+#sep1 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border: 0;
+  border-top: 1px solid rgba(255, 0, 0, 0.4);
+}
+
+#sep2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(255, 0, 0, 0.4);
 }
