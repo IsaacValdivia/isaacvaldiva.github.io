@@ -1,64 +1,47 @@
 import * as React from "react";
 import { useState } from "react";
 
-import { Card, CardImg, CardImgOverlay, Fade } from "reactstrap";
+import { Card, CardImg } from "reactstrap";
 import { useMediaQuery } from "react-responsive";
 import { Modal, ModalHeader, ModalBody } from "reactstrap";
 import { ButtonGroup, Button } from "reactstrap";
 import { about as aboutText } from "../../text.json";
-import { Progress } from "reactstrap";
 
-import { ListGroup, ListGroupItem } from "reactstrap";
+import "./InfoPanel.css";
+
+import { FaYoutube } from "react-icons/fa";
 import Headshot from "../../res/headshot4.png";
 
-const CompetenceContent = (
-  <div>
-    <ListGroup className="competenceParentList">
-      <ListGroupItem className="competenceSection">
-        <span className="sectionText">DAWs</span>
-        <Progress value={90} color="dark" className="progressBar">
-          <span className="progressText">Cubase</span>
-        </Progress>
-        <Progress value={90} color="dark" className="mt-2 progressBar">
-          <span className="progressText">FL Studio</span>
-        </Progress>
-        <Progress value={20} color="dark" className="mt-2 progressBar">
-          <span className="progressText">Pro Tools</span>
-        </Progress>
-        <Progress value={18} color="dark" className="mt-2 progressBar">
-          <span className="progressText">Ableton</span>
-        </Progress>
-      </ListGroupItem>
-      <ListGroupItem className="competenceSection">
-        <span className="sectionText">Middleware</span>
-        <Progress value={10} color="dark" className="progressBar">
-          <span className="progressText">Wwise</span>
-        </Progress>
-        <Progress value={10} color="dark" className="mt-2 progressBar">
-          <span className="progressText">Fmod</span>
-        </Progress>
-      </ListGroupItem>
-      <ListGroupItem className="competenceSection">
-        <span className="sectionText">Other</span>
-        <Progress value={57} color="dark" className="progressBar">
-          <span className="progressText">Sibelius</span>
-        </Progress>
-      </ListGroupItem>
-    </ListGroup>
+const Contact = (
+  <div className="d-flex flex-column justify-content-start align-items-center text-center contactDiv">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <a href="http://www.youtube.com/c/IsaacValdivia" class="fa fa-youtube mt-3"></a>
+    <a href="https://twitter.com/IsaacValdivia_" class="fa fa-twitter mt-3"></a>
+    <a href="https://www.linkedin.com/in/isaac-valdivia-l%C3%B3pez-349353195/" class="fa fa-linkedin mt-3"></a>
+    <a
+      href="javascript:location='mailto:\u0069\u0073\u0061\u0061\u0063\u002e\u0076\u0061\u006c\u0064\u0069\u0076\u0069\u0061\u002e\u0061\u0075\u0064\u0069\u006f\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0"
+      className="fa fa-at mt-3"
+    ></a>
+    <a href="#" class="mt-3">
+      Audio CV
+    </a>
+    <a href="#" class="mt-3">
+      Programming CV
+    </a>
   </div>
 );
 
 const InfoPanel = () => {
   const [fadeInAbout, setFadeInAbout] = useState(false);
-  const [fadeInCompe, setFadeInCompe] = useState(false);
+  const [fadeInContact, setFadeInContact] = useState(false);
 
   const toggleAbout = () => {
     setFadeInAbout(!fadeInAbout);
-    setFadeInCompe(false);
+    setFadeInContact(false);
   };
 
-  const toggleCompe = () => {
-    setFadeInCompe(!fadeInCompe);
+  const toggleContact = () => {
+    setFadeInContact(!fadeInContact);
     setFadeInAbout(false);
   };
 
@@ -68,45 +51,30 @@ const InfoPanel = () => {
     </button>
   );
 
-  const closeBtnCompe = (
-    <button className="close xButton" onClick={toggleCompe}>
+  const closeBtnContact = (
+    <button className="close xButton" onClick={toggleContact}>
       &times;
     </button>
   );
 
   return (
     <Card className="h-100 w-100 justify-content-center align-items-center text-center cardView">
-      <div>
-        <CardImg top className="roundHeadshot " src={Headshot} alt="Card image cap" />
-        {useMediaQuery({ query: "(max-width: 992px)" }) ? (
-          <div>
-            <Modal isOpen={fadeInAbout} toggle={toggleAbout} contentClassName="aboutModal">
-              <ModalHeader toggle={toggleAbout} close={closeBtnAbout}>
-                <span className="infoText">About</span>
-              </ModalHeader>
-              <ModalBody className="modalBody">{aboutText}</ModalBody>
-            </Modal>
-            <Modal isOpen={fadeInCompe} toggle={toggleCompe} contentClassName="aboutModal">
-              <ModalHeader toggle={toggleCompe} close={closeBtnCompe}>
-                <span className="infoText">Competence</span>
-              </ModalHeader>
-              <ModalBody className="modalBody">{CompetenceContent}</ModalBody>
-            </Modal>
-          </div>
-        ) : (
-          <div>
-            <Fade in={fadeInAbout} className="">
-              <CardImgOverlay className="aboutOverlay">
-                <div className="fadeBody">{aboutText}</div>
-              </CardImgOverlay>
-            </Fade>
-            <Fade in={fadeInCompe} className="">
-              <CardImgOverlay className="aboutOverlay">
-                <div className="fadeBody">{CompetenceContent}</div>
-              </CardImgOverlay>
-            </Fade>
-          </div>
-        )}
+      <div className="w-100">
+        <CardImg top className="roundHeadshot" src={Headshot} alt="Card image cap" />
+        <div>
+          <Modal size="lg" isOpen={fadeInAbout} toggle={toggleAbout} contentClassName="aboutModal">
+            <ModalHeader toggle={toggleAbout} close={closeBtnAbout}>
+              <span className="infoText">About</span>
+            </ModalHeader>
+            <ModalBody className="modalBody">{aboutText}</ModalBody>
+          </Modal>
+          <Modal size="sm" isOpen={fadeInContact} toggle={toggleContact} contentClassName="aboutModal">
+            <ModalHeader toggle={toggleContact} close={closeBtnContact}>
+              <span className="infoText">Contact</span>
+            </ModalHeader>
+            <ModalBody className="modalBody contactBody">{Contact}</ModalBody>
+          </Modal>
+        </div>
       </div>
 
       <ButtonGroup
@@ -123,11 +91,11 @@ const InfoPanel = () => {
         </Button>
         <Button
           type="button"
-          outline={!fadeInCompe}
+          outline={!fadeInContact}
           className="infoButton w-100 h-100 text-white"
-          onClick={toggleCompe}
+          onClick={toggleContact}
         >
-          <span className="lowerButtonText">Competence</span>
+          <span className="lowerButtonText">Contact</span>
         </Button>
       </ButtonGroup>
     </Card>

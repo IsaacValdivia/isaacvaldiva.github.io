@@ -21,9 +21,11 @@
   #videoItself2 {
     margin-top: 22vh;
   }
+  #videoItself3 {
+    margin-top: 31vh;
+  }
   .underText {
     margin-top: 22vh;
-    color: 
   }
 }
 
@@ -37,12 +39,15 @@
   #videoItself2 {
     margin-top: 12vh;
   }
+  #videoItself3 {
+    margin-top: 21vh;
+  }
   .underText {
     margin-top: 14vh;
   }
 }
 
-iframe {
+.programmingVideo {
     -moz-transform: scale(0.7); 
     -webkit-transform: scale(0.7); 
     -o-transform: scale(0.7);
@@ -64,6 +69,13 @@ iframe {
 }
 
 #sep2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(255, 0, 0, 0.4);
+}
+
+#sep3 {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;

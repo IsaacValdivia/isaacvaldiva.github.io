@@ -19,11 +19,12 @@ export const AUDIO_SLIDES = [
                  </div>
                  <div className="d-flex h-100 w-100 flex-column justify-content-center align-items-center videoContainer">
                    <iframe
+                     className="programmingVideo"
                      id="videoItself1"
                      altText="Demo video of the application"
                      width="560"
                      height="315"
-                     src="https://www.youtube.com/embed/SMTIy1APUE0"
+                     src="https://www.youtube.com/embed/R5QEPa5AGWE"
                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                      allowFullScreen="true"
                      webkitallowfullscreen="true"
@@ -77,17 +78,57 @@ export const VIDEOGAME_SLIDES = [
                      An implementation of the classic arcade originally released by Data East in 1982. It features 2 new
                      difficulty modes that make use of optimal path-finding and swarming techniques, new audio assets
                      and customizable maps (and an a**-kicking trailer in Spanish :D).
-                     <hr id="sep2"/>
+                     <hr id="sep2" />
                      Code in Github @ <a href="https://github.com/IsaacValdivia/burgertime">IsaacValdivia/burgertime</a>
                    </p>
                  </div>
                  <div className="d-flex h-100 w-100 flex-column justify-content-center align-items-center videoContainer">
                    <iframe
+                     className="programmingVideo"
                      id="videoItself2"
                      altText="Demo video of the application"
                      width="560"
                      height="315"
                      src="https://www.youtube.com/embed/Z7LHLflR5wE"
+                     allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                     allowFullScreen="true"
+                     webkitallowfullscreen="true"
+                     mozallowfullscreen="true"
+                   ></iframe>
+                 </div>
+               </div>
+             </div>
+           )
+         }
+       ];
+
+export const ROBOTICS_SLIDES = [
+         {
+           id: 2,
+           body: (
+             <div className="d-flex h-100 flex-column justify-content-start align-items-center">
+               <div className="d-flex h-100 flex-column justify-content-between align-items-center text-justify fullDiv">
+                 <div className="h-100">
+                   <h5 className="headerResponsive text-center">
+                     BrickPi3 Robot: 2D vision & dynamic path finding for a differential drive robot
+                   </h5>
+                   <p className="bodyResponsive">
+                     Odometry, object tracking (based on 2D vision) and dynamic path finding for a BrickPi3 differential
+                     drive robot. It's capable of chasing and fetching a red ball, navigating grid maps and
+                     recalculating paths to find an exit for them.
+                     <hr id="sep2" />
+                     Code in Github @{" "}
+                     <a href="https://github.com/IsaacValdivia/brickpi-robot">IsaacValdivia/brickpi-robot</a>
+                   </p>
+                 </div>
+                 <div className="d-flex h-100 w-100 flex-column justify-content-center align-items-center videoContainer">
+                   <iframe
+                     className="programmingVideo"
+                     id="videoItself3"
+                     altText="Demo video of the application"
+                     width="560"
+                     height="315"
+                     src="https://www.youtube.com/embed/r1coLtAZqvQ"
                      allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                      allowFullScreen="true"
                      webkitallowfullscreen="true"

@@ -3,6 +3,7 @@
     background-color: rgb(34, 34, 43);
     border-color: aliceblue;
     box-shadow: inset 0px 0px 10px 10px rgb(12, 12, 14);
+    mix-blend-mode: normal;
   }
 }
 
@@ -11,6 +12,7 @@
     background-color: rgb(34, 34, 43);
     border-color: aliceblue;
     box-shadow: inset 0px 0px 30px 30px rgba(20, 20, 20, 0.85);
+    mix-blend-mode: normal;
   }
 }
 
@@ -35,25 +37,6 @@
   }
 }
 
-.aboutOverlay {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(250, 235, 215, 0.925);
-  box-shadow: inset 0 0 100vmin 1vmax;
-}
-
-.aboutModal {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(250, 235, 215, 0.925);
-  box-shadow: inset 0 0 100vmin 1vmax;
-}
-
-.modalBody {
-  color: white;
-  font-size: 16px;
-}
-
 .fadeBody {
   color: black;
   font-size: 17px;
@@ -61,10 +44,6 @@
 
 .infoButton {
   mix-blend-mode: difference;
-}
-
-.infoText {
-  color: white;
 }
 
 @media screen and (max-width: 992px) {
@@ -79,47 +58,6 @@
   }
 }
 
-.xButton {
-	font-size: 30px;
-	color: rgb(209, 31, 31);
-}
-
 .noBorder {
   border-width: 0px;
-}
-
-.competenceParentList {
-  border-width: 0px;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-.competenceSection {
-  border-width: 0px;
-  background-color: rgba(0, 0, 0, 0);
-}
-
-
-@media screen and (max-width: 992px) {
-  .sectionText {
-    font-size: 18px;
-  }
-  .progressBar {
-    height: 3.5vh;
-  }
-  .progressText {
-    font-size: 14px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .sectionText {
-    font-size: 28px;
-    letter-spacing: 0.2vw;
-  }
-  .progressBar {
-    height: 2.5vh;
-  }
-  .progressText {
-    font-size: 19px;
-  }
 }
