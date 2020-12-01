@@ -22,10 +22,10 @@ const Contact = (
       href="javascript:location='mailto:\u0069\u0073\u0061\u0061\u0063\u002e\u0076\u0061\u006c\u0064\u0069\u0076\u0069\u0061\u002e\u0061\u0075\u0064\u0069\u006f\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0"
       className="fa fa-at mt-3"
     ></a>
-    <a href="#" class="mt-3">
+    <a href="https://docdro.id/Gwhg1Qz" class="mt-3">
       Audio CV
     </a>
-    <a href="#" class="mt-3">
+    <a href="https://docdro.id/tIOqUFi" class="mt-3">
       Programming CV
     </a>
   </div>
