@@ -1,3 +1,5 @@
+import React from "react";
+
 export const METAL_ITEMS = [
          {
            id: 1,
@@ -34,7 +36,17 @@ export const ELECTRONIC_ITEMS = [
 export const INTERACTIVE_ITEMS = [
   {
     id: 1,
-    link: undefined
+    body: (
+      <div className="d-flex h-100 flex-column justify-content-start align-items-center">
+        <div className="d-flex h-100 flex-column justify-content-between align-items-center text-justify fullDiv">
+          <div className="h-100">
+            <h5 className="headerResponsive text-center">
+              Work In Progress ⚒️
+            </h5>
+          </div>
+        </div>
+      </div>
+    )
   }
 ];
 
