@@ -1,0 +1,15 @@
+{
+  "aboutMeHeader": "🦝 About Me",
+  "aboutMeText": "Hi! I'm a Game Developer and Sound Artist (designer and composer) with a strong background in Computer Science. I'm fascinated with the role of sound in videogames in all of its disciplines: audio programming, score, audio design...",
+  "currentlyHeader": "📅 Currently",
+  "currentlyText": "I'm a student of the M.Eng. in Creation of Videogames (specialty in Programming) at Pompeu Fabra University. I'm also part of the team of musicians of an upcoming Pokémon fangame: Pokémon Resilience, and Sound Designer and Composer for an undisclosed project at an early stage :).",
+  "audioSkillsHeader": "🔊 Main Audio Skills",
+  "audioSkillsText": "Cubase, FL Studio, Sibelius, WWise, Music writing, Music theory, Orchestration, Audio mixing and mastering, Piano playing.",
+  "programmingSkillsHeader": "🖥️ Main Programming Skills",
+  "programmingSkillsText": "C++, Python, Java, Machine Learning, Computer Vision, Mobile Application Development, React & React Native.",
+  "educationHeader": "🎓 Education",
+  "educationText": "I'm a B.S. Computer Science and Engineering graduate student at University of Zaragoza. I graduated on September 2020 when I presented my thesis: \"Android application to reproduce music based on the user's emotions\", which was graded: Outstanding 9.0/10.",
+  "funFactsHeader": "🎉 Fun Facts",
+  "funFactsText": "a"
+
+}
