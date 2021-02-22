@@ -34,7 +34,7 @@ export const ELECTRONIC_ITEMS = [
 export const INTERACTIVE_ITEMS = [
   {
     id: 1,
-    link: undefined
+    link: "https://www.youtube.com/embed/nqi-Dw9LvgE"
   }
 ];
 
