@@ -36,7 +36,7 @@ const HIP_HOP_ICON = <GiAudioCassette />;
 const HYBRID_OTHER_ICON = <GiPerspectiveDiceSixFacesRandom />;
 
 const TOP_LEFT_CONTENT = <OwnCarousel video data={ORCHESTRAL_ITEMS} />;
-const TOP_CENTER_CONTENT = <OwnCarousel data={INTERACTIVE_ITEMS} />;
+const TOP_CENTER_CONTENT = <OwnCarousel video data={INTERACTIVE_ITEMS} />;
 const TOP_RIGHT_CONTENT = <OwnCarousel video data={METAL_ITEMS} />;
 const MID_LEFT_CONTENT = <OwnCarousel video data={ELECTRONIC_ITEMS} />;
 const MID_RIGHT_CONTENT = <OwnCarousel video data={CHAMBER_ITEMS} />;
@@ -45,7 +45,7 @@ const BOT_CENTER_CONTENT = <OwnCarousel video data={PERFORMANCE_ITEMS} />;
 const BOT_LEFT_CONTENT = <OwnCarousel video data={HIP_HOP_ITEMS} />;
 
 const TOP_LEFT = <Node title="Orchestral" icon={ORCHESTRAL_ICON} nodeContent={TOP_LEFT_CONTENT} />;
-const TOP_CENTER = <Node title="Interactive" icon={INTERACTIVE_ICON} nodeContent={TOP_CENTER_CONTENT} special={true} />;
+const TOP_CENTER = <Node title="Interactive" icon={INTERACTIVE_ICON} nodeContent={TOP_CENTER_CONTENT}/>;
 const TOP_RIGHT = <Node title="Metal&Rock" icon={METAL_ICON} nodeContent={TOP_RIGHT_CONTENT} />;
 const MID_LEFT = <Node title="Electronic" icon={ELECTRONIC_ICON} nodeContent={MID_LEFT_CONTENT} />;
 const MID_RIGHT = <Node title="Chamber" icon={CHAMBER_ICON} nodeContent={MID_RIGHT_CONTENT} />;
