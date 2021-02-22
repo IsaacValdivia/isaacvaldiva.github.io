@@ -5,19 +5,55 @@ import { Card, CardImg } from "reactstrap";
 import { useMediaQuery } from "react-responsive";
 import { Modal, ModalHeader, ModalBody } from "reactstrap";
 import { ButtonGroup, Button } from "reactstrap";
-import { about as aboutText } from "../../text.json";
+import { aboutMeHeader, aboutMeText, currentlyHeader, 
+  currentlyText, audioSkillsHeader, audioSkillsText, 
+  programmingSkillsHeader, programmingSkillsText,
+  educationHeader, educationText, funFactsHeader, funFactsText } from "../../aboutText.json";
 
 import "./InfoPanel.css";
 
 import { FaYoutube } from "react-icons/fa";
 import Headshot from "../../res/headshot4.png";
 
+const About = (
+  <div className="d-flex flex-column justify-content-start align-items-start">
+    <h4>{aboutMeHeader}</h4>
+    <div className="text-justify textAbout">{aboutMeText}</div>
+    <br></br>
+
+    <h4>{currentlyHeader}</h4>
+    <div className="text-justify textAbout">{currentlyText}</div>
+    <br></br>
+
+    <h4>{audioSkillsHeader}</h4>
+    <div className="text-justify textAbout">{audioSkillsText}</div>
+    <br></br>
+
+    <h4>{programmingSkillsHeader}</h4>
+    <div className="text-justify textAbout">{programmingSkillsText}</div>
+    <br></br>
+
+    <h4>{educationHeader}</h4>
+    <div className="text-justify textAbout">{educationText}</div>
+    <br></br>
+
+    <h4>{funFactsHeader}</h4>
+    <div className="text-justify textAbout">
+      <ul>
+        <li>?</li>
+      </ul>
+    </div>
+    <br></br>
+    
+  </div>
+)
+
 const Contact = (
   <div className="d-flex flex-column justify-content-start align-items-center text-center contactDiv">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <a href="http://www.youtube.com/c/IsaacValdivia" class="fa fa-youtube mt-3"></a>
     <a href="https://twitter.com/IsaacValdivia_" class="fa fa-twitter mt-3"></a>
-    <a href="https://www.linkedin.com/in/isaac-valdivia-l%C3%B3pez-349353195/" class="fa fa-linkedin mt-3"></a>
+    <a href="https://www.linkedin.com/in/ivaldivia/" class="fa fa-linkedin mt-3"></a>
     <a
       href="javascript:location='mailto:\u0069\u0073\u0061\u0061\u0063\u002e\u0076\u0061\u006c\u0064\u0069\u0076\u0069\u0061\u002e\u0061\u0075\u0064\u0069\u006f\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0"
       className="fa fa-at mt-3"
@@ -66,7 +102,7 @@ const InfoPanel = () => {
             <ModalHeader toggle={toggleAbout} close={closeBtnAbout}>
               <span className="infoText">About</span>
             </ModalHeader>
-            <ModalBody className="modalBody">{aboutText}</ModalBody>
+            <ModalBody className="modalBody">{About}</ModalBody>
           </Modal>
           <Modal size="sm" isOpen={fadeInContact} toggle={toggleContact} contentClassName="aboutModal">
             <ModalHeader toggle={toggleContact} close={closeBtnContact}>

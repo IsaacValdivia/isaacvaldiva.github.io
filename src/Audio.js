@@ -36,7 +36,7 @@ const HIP_HOP_ICON = <GiAudioCassette />;
 const HYBRID_OTHER_ICON = <GiPerspectiveDiceSixFacesRandom />;
 
 const TOP_LEFT_CONTENT = <OwnCarousel video data={ORCHESTRAL_ITEMS} />;
-const TOP_CENTER_CONTENT = <OwnCarousel video data={INTERACTIVE_ITEMS} />;
+const TOP_CENTER_CONTENT = <OwnCarousel data={INTERACTIVE_ITEMS} />;
 const TOP_RIGHT_CONTENT = <OwnCarousel video data={METAL_ITEMS} />;
 const MID_LEFT_CONTENT = <OwnCarousel video data={ELECTRONIC_ITEMS} />;
 const MID_RIGHT_CONTENT = <OwnCarousel video data={CHAMBER_ITEMS} />;
