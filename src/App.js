@@ -43,7 +43,7 @@ class App extends React.Component {
           </Router>
         </div>
         <div className="lowerZone d-flex flex-row justify-content-between text-white">
-          <span className="lowerText">© 2020 Isaac Valdivia</span>
+          <span className="lowerText">© 2021 Isaac Valdivia</span>
           <a
             href="javascript:location='mailto:\u0069\u0073\u0061\u0061\u0063\u002e\u0076\u0061\u006c\u0064\u0069\u0076\u0069\u0061\u002e\u0061\u0075\u0064\u0069\u006f\u0040\u0067\u006d\u0061\u0069\u006c\u002e\u0063\u006f\u006d';void 0"
             className="lowerText"

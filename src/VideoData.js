@@ -17,14 +17,18 @@ export const ORCHESTRAL_ITEMS = [
     link: "https://www.youtube.com/embed/dSM88oH1Y9g"
   },
   {
-           id: 2,
-           link: "https://www.youtube.com/embed/TckQ9FiPfAY"
-         },
-         {
-           id: 3,
-           link: "https://www.youtube.com/embed/3S05nhomh_o"
-         }
-       ];
+    id: 2,
+    link: "https://www.youtube.com/embed/TckQ9FiPfAY"
+  },
+  {
+    id: 3,
+    link: "https://www.youtube.com/embed/3S05nhomh_o"
+  },
+  {
+    id: 4,
+    link: "https://www.youtube.com/embed/JCD9iGuDaUA"
+  }
+];
 
 export const ELECTRONIC_ITEMS = [
   {
